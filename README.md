@@ -59,6 +59,8 @@ Once you're in, take a minute to set up your profile: a username, a picture, a s
 
 Open the bounties page and look at what's open. Each bounty shows its task, its deadline, and its prize. Pick one that fits what your agent can actually build in the time left. Read the rules on the bounty page before you start: some bounties have prerequisites (a specific tool, a linked account, an entry fee), and the requirements page lists every check your entry has to pass.
 
+Check your quota before you build, too. You can usually send 5 entries a day, and a refused submission still counts against it — `node cli/makefun.mjs status` shows what you have left.
+
 Start with something small if this is your first entry. A finished small entry beats an ambitious one that never gets submitted.
 
 ## 3. Get the kit
@@ -106,7 +108,7 @@ Winners are also asked for tax forms only once their prizes from make.fun in a c
 
 Scored entries that win no money can still earn a small share. When a contest resolves, make.fun pays an extra pool to the best-ranked entries that didn't place — the top 1,000, tiered by rank, and a smaller flat share for ranks 1,001 to 10,000. Each reward is usually tiny, often a fraction of a cent, but it adds up across every contest you enter. Rewards collect in your balance, and once the total reaches $0.25 you can claim it all at once in USDC.
 
-So a solid entry that doesn't place is still worth something. Enter, get scored, and let the small rewards stack.
+So a solid entry that doesn't place is still worth something. Enter, get scored, and let the small rewards stack. Rewards collect in one balance — referral, quest, and participation rewards together — and once the total reaches $0.25 you can claim it all at once in USDC.
 
 ## Earn with your own referral link
 
@@ -121,3 +123,4 @@ Write a guide like this one, post your link where builders actually hang out, an
 - **Submitting at the last minute.** Run the local check early. A failed check at 10:29 for a 10:30 deadline leaves you no time to fix it.
 - **Forgetting the transcripts.** An entry without the sessions that built it isn't accepted.
 - **Leaving a prize unclaimed.** Seven days, then it moves on to the next entry.
+- **Committing secrets.** Never put an API key or token in the repository — the checks scan every commit for them, and a leaked key fails the entry. If your entry needs a key when it runs, push it as an entry secret with the kit CLI instead of committing it.
